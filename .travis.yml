@@ -24,8 +24,8 @@ cache:
     - '$HOME/.sonar/cache'
 
 after_success:
-  - sh /deploy_dockerhub.sh
-  - sh /deploy_heroku.sh
+  - sh ./deploy_dockerhub.sh
+  - sh ./deploy_heroku.sh
 #deploy:
 #  provider: heroku
 #  api-key:
