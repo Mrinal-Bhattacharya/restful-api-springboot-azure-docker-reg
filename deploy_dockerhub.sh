@@ -10,8 +10,8 @@ else
 
 fi
 
-docker build -f Dockerfile -t $DOCKER_REPO:$COMMIT .
+docker build -f Dockerfile -t $DOCKER_REPO:latest .
 
-docker tag $DOCKER_REPO:$COMMIT $DOCKER_REPO:$TAG
+docker tag $DOCKER_REPO:latest $DOCKER_REPO:$TAG
 
 docker push $DOCKER_REPO
