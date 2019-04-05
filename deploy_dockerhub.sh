@@ -10,8 +10,8 @@ else
 
 fi
 
-docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
+docker build -f Dockerfile -t $DOCKER_REPO:$COMMIT .
 
-docker tag $TRAVIS_REPO_SLUG $DOCKER_REPO
+docker tag $DOCKER_REPO:$COMMIT $DOCKER_REPO:$TAG
 
 docker push $DOCKER_REPO
