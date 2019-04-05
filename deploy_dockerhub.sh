@@ -10,8 +10,8 @@ else
 
 fi
 
-docker build -f Dockerfile -t $DOCKER_REPO:latest .
+docker build -f Dockerfile -t mrinalbhattacharya/restful-api-springboot-docker:$TAG
 
-docker tag $DOCKER_REPO:latest $DOCKER_REPO:$TAG
+#docker tag $DOCKER_REPO:latest $DOCKER_REPO:$TA$DOCKER_REPO:latest $DOCKER_REPO:$TAG
 
-docker push $DOCKER_REPO
+docker push mrinalbhattacharya/restful-api-springboot-docker:$TAG
