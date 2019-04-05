@@ -1,23 +1,6 @@
-docker login –username $DOCKER_USER –password $DOCKER_PASS
-
-if [ $TRAVIS_BRANCH = "master" ]; then
-
-  TAG=latest
-
-else
-
-  TAG=$TRAVIS_BRANCH
-
-fi
-
-
-echo $DOCKER_REPO
-echo $TRAVIS_REPO_SLUG
-echo $TRAVIS_BRANCH
-
-
-docker build -f Dockerfile -t $DOCKER_REPO:$TAG .
+docker login –username mrinalbhattacharya –password Docker@1987
+docker build -f Dockerfile -t mrinalbhattacharya/restful-api-springboot-docker:latest .
 
 #docker tag $DOCKER_REPO:latest $DOCKER_REPO:$TAG
 
-docker push $DOCKER_REPO:$TAG
+docker push mrinalbhattacharya/restful-api-springboot-docker:latest
