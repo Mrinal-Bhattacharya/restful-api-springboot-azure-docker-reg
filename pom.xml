@@ -6,9 +6,9 @@
     <version>1.5.6.RELEASE</version>
   </parent>
   <groupId>johnny.tutorial</groupId>
-  <artifactId>RestfulSpringBoot</artifactId>
+  <artifactId>RestfulSpringBootDocker</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>RestfulSpringBoot</name>
+  <name>RestfulSpringBootDocker</name>
   <description>Restful Web Service for Game Store</description>
 
   <properties>
