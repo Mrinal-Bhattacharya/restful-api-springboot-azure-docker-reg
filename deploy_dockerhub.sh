@@ -1,4 +1,4 @@
-docker login –u=mrinalbhattacharya –p=Docker@1987
+docker login –u=mrinalbhattacharya –p=Docker@1987 docker.io
 docker build -f Dockerfile -t mrinalbhattacharya/restful-api-springboot-docker:latest .
 echo "build and tag is done"
 docker images
