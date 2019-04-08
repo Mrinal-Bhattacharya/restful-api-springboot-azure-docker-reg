@@ -30,7 +30,7 @@ after_success:
 - docker images
 - docker container ls
 - docker push mrinalbhattacharya/restful-api-springboot-docker:latest
-  - sh ./deploy_heroku.sh
+#  - sh ./deploy_heroku.sh
 #deploy:
 #  provider: heroku
 #  api-key:
