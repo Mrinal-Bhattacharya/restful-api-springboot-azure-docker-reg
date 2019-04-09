@@ -1,11 +1,3 @@
 docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-echo "$TRAVIS_BRANCH"
-echo "$TRAVIS_TAG"
-echo "$TRAVIS_BUILD_NUMBER"
-echo "$TRAVIS_BUILD_ID"
-echo "$TRAVIS_COMMIT"
-echo "$TRAVIS_REPO_SLUG"
-echo "$DOCKER_REPOSITORY"
-echo "$DOCKER_REPO"
-docker build -t "$DOCKER_REPOSITORY":"$TRAVIS_BUILD_NUMBER" .
-docker push "$$DOCKER_REPOSITORY":"$TRAVIS_BUILD_NUMBER"
+docker build -t mrinalbhattacharya/"$DOCKER_REPO":"$TRAVIS_BUILD_NUMBER" .
+docker push mrinalbhattacharya/"$DOCKER_REPO":"$TRAVIS_BUILD_NUMBER"
