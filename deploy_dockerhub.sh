@@ -1,6 +1,9 @@
 docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-docker build -t mrinalbhattacharya/restful-api-springboot-docker:latest .
-echo "build and tag is done"
-docker images
-docker container ls
-docker push mrinalbhattacharya/restful-api-springboot-docker:latest
+echo "$TRAVIS_BRANCH"
+echo "$TRAVIS_TAG"
+echo "$TRAVIS_BUILD_NUMBER"
+echo "$TRAVIS_BUILD_ID"
+echo "$TRAVIS_COMMIT"
+echo "$TRAVIS_REPO_SLUG"
+docker build -t "$DOCKER_REPO":latest .
+docker push "$$DOCKER_REPO":latest
