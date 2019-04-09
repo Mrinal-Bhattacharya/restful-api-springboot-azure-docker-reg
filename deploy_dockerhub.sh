@@ -5,5 +5,7 @@ echo "$TRAVIS_BUILD_NUMBER"
 echo "$TRAVIS_BUILD_ID"
 echo "$TRAVIS_COMMIT"
 echo "$TRAVIS_REPO_SLUG"
-docker build -t "$DOCKER_REPO":latest .
-docker push "$$DOCKER_REPO":latest
+echo "$DOCKER_REPOSITORY"
+echo "$DOCKER_REPO"
+docker build -t "$DOCKER_REPOSITORY":"$TRAVIS_BUILD_NUMBER" .
+docker push "$$DOCKER_REPOSITORY":"$TRAVIS_BUILD_NUMBER"
