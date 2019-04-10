@@ -25,10 +25,10 @@ cache:
 
 after_success:
   - sh ./deploy_dockerhub.sh
-  - sh ./deploy_heroku.sh
-#deploy:
-#  provider: heroku
-#  api-key:
-#    secure: $HEROKU_API_KEY
-#  app: gamestore-api-mrinal
+#  - sh ./deploy_heroku.sh
+deploy:
+  provider: heroku
+  api-key: $HEROKU_API_KEY
+  app: restful-api-springboot-docker
+
 ################a19cf6da3e09d2096f790b3d3f1172deeea7e9d7##########################nnnnnjjjjjsssssyyy
