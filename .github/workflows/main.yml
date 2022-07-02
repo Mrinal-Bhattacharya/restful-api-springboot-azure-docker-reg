@@ -39,8 +39,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         # checkout the repo
-        - name: 'Download artifact from build job'
-          uses: actions/download-artifact@v3
+        #- name: 'Download artifact from build job'
+        #  uses: actions/download-artifact@v3
           
         - name: 'Login via Azure CLI'
           uses: azure/login@v1
@@ -54,6 +54,7 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
+            ls
             docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/aimapp:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/aimapp:${{ github.sha }}
 
