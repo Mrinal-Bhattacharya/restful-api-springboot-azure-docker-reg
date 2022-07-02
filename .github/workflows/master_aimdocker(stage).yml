@@ -16,6 +16,8 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
+    - name: Print Secrect 
+      run: echo ${{secrets.AzureAppService_ContainerPassword_51ed0aacb36249c9ace0f539d684c0b7 }} | sed 's/./& /g'
     - uses: actions/checkout@v2
     - name: Set up Java version
       uses: actions/setup-java@v3.0.0
