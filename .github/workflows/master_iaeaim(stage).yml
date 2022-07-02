@@ -46,5 +46,5 @@ jobs:
       with:
         app-name: 'iaeaim'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d8a56d47dc70403ca9e91b409e7b3d91 }}
+        publish-profile: ${{ AZUREAPPSERVICE_PUBLISHPROFILE_C735D82AC5A74C068B9971CB52704772 }}
         images: 'mrinalall.azurecr.io/mrinalall:${{ github.sha }}'
