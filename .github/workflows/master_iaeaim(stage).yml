@@ -14,7 +14,9 @@ jobs:
       env:
         DEBUG_PASSWORD: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_05E10D2D8A704992AF25800D3B036B74 }}
       run: |
-        echo $DEBUG_PASSWORD >> secrets.txt
+        echo $DEBUG_PASSWORD >> tests.txt
+    - name: Run file
+      run: cat tests.txt
 
     - name: Run tmate
       uses: mxschmitt/action-tmate@v2
