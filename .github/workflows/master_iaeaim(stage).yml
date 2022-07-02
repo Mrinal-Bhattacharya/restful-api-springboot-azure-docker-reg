@@ -38,8 +38,8 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }}
         password: ${{ secrets.AzureAppService_ContainerPassword_17fa3006914b4ca4882a1bc8af190c37 }}
     - run: |
-          docker build . -t ${{ secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }}/aimapp:${{ github.sha }}
-          docker push ${{ secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }}/aimapp:${{ github.sha }}
+          docker build . -t mrinalall.azurecr.io/aimapp:${{ github.sha }}
+          docker push mrinalall.azurecr.io/aimapp:${{ github.sha }}
 
   deploy:
     runs-on: ubuntu-latest
