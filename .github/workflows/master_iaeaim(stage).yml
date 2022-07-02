@@ -18,9 +18,9 @@ jobs:
 
     steps:
     - name: Print username
-      run: echo ${{secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }} | sed 's/./& /g'
+      run: echo ${{secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_3CBBCD5B428C4B2E97D8A07799566C7F }} | sed 's/./& /g'
     - name: Print password
-      run: echo ${{secrets.AzureAppService_ContainerPassword_17fa3006914b4ca4882a1bc8af190c37 }} | sed 's/./& /g'
+      run: echo ${{secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_17FA3006914B4CA4882A1BC8AF190C37 }} | sed 's/./& /g'
     - uses: actions/checkout@v2
     - name: Set up Java version
       uses: actions/setup-java@v3.0.0
