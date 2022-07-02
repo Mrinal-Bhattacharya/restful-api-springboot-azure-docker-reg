@@ -34,7 +34,7 @@ jobs:
     - name: Log in to registry, Build and Push
       uses: azure/docker-login@v1
       with:
-        login-server: https://mrinalall.azurecr.io/
+        login-server: mrinalall.azurecr.io
         username: ${{ secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }}
         password: ${{ secrets.AzureAppService_ContainerPassword_17fa3006914b4ca4882a1bc8af190c37 }}
     - run: |
