@@ -56,4 +56,4 @@ jobs:
         app-name: 'iaeaim'
         slot-name: 'stage'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_05e10d2d8a704992af25800d3b036b74 }}
-        images: 'mrinalall.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }}/mrinalall:${{ github.sha }}'
+        images: 'mrinalall.azurecr.io/mrinalall:${{ github.sha }}'
