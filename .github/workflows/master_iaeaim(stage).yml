@@ -45,6 +45,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'iaeaim'
-        slot-name: 'stage'
+        slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d8a56d47dc70403ca9e91b409e7b3d91 }}
         images: 'mrinalall.azurecr.io/mrinalall:${{ github.sha }}'
