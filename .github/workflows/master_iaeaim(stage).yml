@@ -31,9 +31,6 @@ jobs:
     - name: 'Download artifact from build job'
       uses: actions/download-artifact@v3
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-
     - name: Log in to registry, Build and Push
       uses: azure/docker-login@v1
       with:
