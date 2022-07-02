@@ -4,7 +4,7 @@ name: Linux_Container_Workflow
 env:
   AZURE_WEBAPP_NAME: your-app-name    # set this to the name of your Azure Web App
   JAVA_VERSION: '8'                  # set this to the Java version to use
-  DISTRIBUTION: aimapp  
+  DISTRIBUTION: zulu  
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
