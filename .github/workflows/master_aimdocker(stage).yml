@@ -3,7 +3,7 @@
 
 name: Build and deploy container app to Azure Web App - aimdocker(stage)
 env:
-  AZURE_WEBAPP_NAME: your-app-name    # set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: aimapp    # set this to the name of your Azure Web App
   JAVA_VERSION: '8'                  # set this to the Java version to use
   DISTRIBUTION: zulu 
 on:
