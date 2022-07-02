@@ -42,11 +42,10 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_17fa3006914b4ca4882a1bc8af190c37 }}
 
     - name: Build and push container image to registry
-      uses: docker/build-push-action@v2
-      with:
-        push: true
-        tags: mrinalall.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }}/mrinalall:${{ github.sha }}
-        file: ./Dockerfile
+    - run: |
+          ls
+          docker build . -t ${{ secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }}/aimapp:${{ github.sha }}
+          docker push ${{ secrets.AzureAppService_ContainerUsername_3cbbcd5b428c4b2e97d8a07799566c7f }}/aimapp:${{ github.sha }}
 
   deploy:
     runs-on: ubuntu-latest
